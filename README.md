@@ -32,7 +32,7 @@ For Ubuntu, Go to the [Linux zkBitcoin Miner Github for Ubuntu 22&24](https://gi
 2. Update the following configuration parameters as needed:
    - `minerAddress`: Your Base Blockchain (Ethereum) address for mining rewards (must include the '0x' prefix).
    - `privateKey`: Your private key associated with the mining Base Blockchain (Ethereum) address.
-   - `MinBWORKperMint` and `MaxBWORKperMint`: Set your desired minimum and maximum zkBitcoin rewards per mint transaction. (Note, if omitted, this will default to `250` and `500` zkBitcoin respectively)
+   - `MinBWORKperMint` and `MaxBWORKperMint`: Set your desired minimum and maximum Based Work Token rewards per mint transaction. (Note, if omitted, this will default to `50` and `125` zkBitcoin respectively)
    - `HowManyBlocksAWAYFromAdjustmentToSendMinimumBWORK`: Adjust this value based on how many blocks away from the adjustment you wish to start sending the minimum zkBitcoin. This can be a value from 0 - 2000 depending on how many other users are submitting. (Note, if omitted, this will default to `200` blocks)
    - `web3api`: Replace with your own web3api if needed; defaults to the provided Alchemy account for testing.
 
@@ -119,7 +119,7 @@ Options:
 
 -  MaxZKBTCperMint         (Solo only) Maxmium amount of zkBitcoin to allow the mint to succeed
 
--  HowManyBlocksAWAYFromAdjustmentToSendMinimumZKBTC (Solo only) How many blocks way from a readjustment do you want to send MinZKBTCperMint
+-  HowManyBlocksAWAYFromAdjustmentToSendMinimumBWORK (Solo only) How many blocks way from a readjustment do you want to send MinBWORKperMint
 
 -  NFTApiURL               (Solo only) URL to the API for NFT minting
   
@@ -171,11 +171,10 @@ zkBitcoin Miner is released under the Apache License, Version 2.0. It includes s
 - Sample CLI launch parameter can be found in the ".bat" file found together with this miner, please refer to it if you need help.
 - Ensure you are mining to the correct address/account. This is YOUR RESPONSIBILITY.
 - It is recommended to use your own web3api (e.g. Infura / Geth / Parity) if you solo mine, default value is for TESTING PURPOSES ONLY.
-- A default developer fee of 2.0% is applied.
 - In the case if the compute load for your GPU is not >= 99%, you can adjust the intensity via (amdIntensity/cudaIntensity/intelIntensity).
 
 Thank you for trying out the zkBitcoin Miner!
 
 ## Feedback and Support
 
-We welcome your feedback and suggestions to improve the zkBitcoin Miner. Please submit issues to the GitHub repository or reach out via the zkBitcoin Discord to `Untouchable_Fge#6920`, or find out more on the [zkBitcoin website](https://testnet.zkbitcoin.org/index/).
+We welcome your feedback and suggestions to improve the Based Work Token Miner. Please submit issues to the GitHub repository or reach out via the Based Work Token Discord to `Untouchable_Fge#6920`, or find out more on the [Based Work Token website](https://basedworktoken.org).
