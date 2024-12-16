@@ -1,16 +1,16 @@
-# zkBitcoin Miner Overview
+# Base Work Miner Overview
 
-zkBitcoin Miner forked from IwYeo's SoliditySHA3Miner
+Based Work Token Miner forked from IwYeo's SoliditySHA3Miner
 
 Designed for developers and enthusiasts looking to mine zkBitcoin, a minable ERC-918 compatible token on zkSync Era.
 
 ## System Requirements and Dependencies
 
-The zkBitcoin Miner is built with the following technologies and libraries:
+The Based Work Token Miner is built with the following technologies and libraries:
 
-- **.NET 5.0**: Necessary for running the miner. Download from [Microsoft .NET Download](https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-5.0.5-windows-x64-installer).
+- **.NET 6.0**: Necessary for running the miner. Download from [Microsoft .NET Download](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-6.0.428-windows-x64-installer).
 - **VC++ 2019**: Required for certain cryptographic functions. Download from [Visual Studio](https://aka.ms/vs/16/release/vc_redist.x64.exe) or [Microsoft Support](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads).
-- **nVidia CUDA SDK 10.2** (64-bit): For nVidia GPU support. Ensure your nVidia drivers are version 396 or above. [nVidia Drivers](https://www.nvidia.com/drivers/beta).
+- **nVidia CUDA SDK 12.5** (64-bit): For nVidia GPU support. Ensure your nVidia drivers are version 527.41 or above. [nVidia Drivers](https://www.nvidia.com/drivers/beta).
 - **AMD APP SDK v3.0.130.135** (OpenCL): For AMD GPU support. Download from [Google Drive](https://drive.google.com/file/d/1P5jqRGbWRW1l5vxlm8MqaQRBKpUNUSyf/view?usp=sharing).
 - **gcc 4.8.5**: For compiling on Linux-based systems.
 
@@ -18,30 +18,31 @@ The zkBitcoin Miner is built with the following technologies and libraries:
 
 ### Prerequisites
 
-Before starting with zkBitcoin mining, ensure you have the following:
+Before starting with Based Work Token mining, ensure you have the following:
 
-- **.NET Core Runtime**: For Windows, download from [Microsoft .NET Download](https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-5.0.5-windows-x64-installer). 
+- **.NET Core Runtime**: For Windows, download from [Microsoft .NET Download](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-6.0.428-windows-x64-installer).
 - **Nvidia or AMD GPU Drivers**: Ensure you have the latest drivers installed that support CUDA or OpenCL, respectively.
 
-For Ubuntu, Go to the [Linux zkBitcoin Miner Github](https://github.com/ZKBitcoinToken/Linux-CPU-GPU-zkBitcoin-Miner)
+For Ubuntu, Go to the [Linux zkBitcoin Miner Github for Ubuntu 16,18,& 20](https://github.com/BasedWorkToken/Miner-Testnet-Ubuntu-16-18-20)
+For Ubuntu, Go to the [Linux zkBitcoin Miner Github for Ubuntu 22&24](https://github.com/BasedWorkToken/Miner-Testnet-Ubuntu-22-24)
 
 ### Configuration
 
-1. Open the `_zkBitcoinMiner.conf` file for editing.
+1. Open the `BasedWorkToken.conf` file for editing.
 2. Update the following configuration parameters as needed:
-   - `minerAddress`: Your zkSync Era (Ethereum) address for mining rewards (must include the '0x' prefix).
-   - `privateKey`: Your private key associated with the mining zkSync Era (Ethereum) address.
-   - `MinZKBTCperMint` and `MaxZKBTCperMint`: Set your desired minimum and maximum zkBitcoin rewards per mint transaction. (Note, if omitted, this will default to `250` and `500` zkBitcoin respectively)
-   - `HowManyBlocksAWAYFromAdjustmentToSendMinimumZKBTC`: Adjust this value based on how many blocks away from the adjustment you wish to start sending the minimum zkBitcoin. This can be a value from 0 - 2000 depending on how many other users are submitting. (Note, if omitted, this will default to `200` blocks)
+   - `minerAddress`: Your Base Blockchain (Ethereum) address for mining rewards (must include the '0x' prefix).
+   - `privateKey`: Your private key associated with the mining Base Blockchain (Ethereum) address.
+   - `MinBWORKperMint` and `MaxBWORKperMint`: Set your desired minimum and maximum zkBitcoin rewards per mint transaction. (Note, if omitted, this will default to `250` and `500` zkBitcoin respectively)
+   - `HowManyBlocksAWAYFromAdjustmentToSendMinimumBWORK`: Adjust this value based on how many blocks away from the adjustment you wish to start sending the minimum zkBitcoin. This can be a value from 0 - 2000 depending on how many other users are submitting. (Note, if omitted, this will default to `200` blocks)
    - `web3api`: Replace with your own web3api if needed; defaults to the provided Alchemy account for testing.
 
-3. Save your changes to `_zkBitcoinMiner.conf`.
+3. Save your changes to `BasedWorkToken.conf`.
 
 ### Starting the Miner
 
 To begin mining:
-1. Run the `_zkBitcoin Miner Start.bat` file in the miner's directory.
-2. Ensure you have a minimal amount of ZK Sync Era Ethereum in your account to start.
+1. Run the `BaseWorkToken_Start.bat` file in the miner's directory.
+2. Ensure you have a minimal amount of Base Ethereum in your account to start.
 
 ## Usage and Options
 
