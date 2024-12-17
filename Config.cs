@@ -56,7 +56,7 @@ namespace SoliditySHA3Miner
 
         public float MaxBWORKperMint { get; set; }
         public float MinBWORKperMint { get; set; }
-        public float HowManyBlocksAWAYFromAdjustmentToSendMinimumZKBTC { get; set; }
+        public float HowManyBlocksAWAYFromAdjustmentToSendMinimumBWORK { get; set; }
 
 
         public float gasPrice { get; set; }
@@ -105,7 +105,7 @@ namespace SoliditySHA3Miner
             privateKey = Defaults.privateKey;
             MaxBWORKperMint = Defaults.MaxBWORKperMint;
             MinBWORKperMint = Defaults.MinBWORKperMint;
-            HowManyBlocksAWAYFromAdjustmentToSendMinimumZKBTC = Defaults.HowManyBlocksAWAYFromAdjustmentToSendMinimumZKBTC;
+            HowManyBlocksAWAYFromAdjustmentToSendMinimumBWORK = Defaults.HowManyBlocksAWAYFromAdjustmentToSendMinimumBWORK;
             gasPrice = Defaults.GasPrice;
             gasPricePriority = Defaults.GasPricePrority;
             gasLimit = Defaults.GasLimit;
@@ -841,8 +841,8 @@ namespace SoliditySHA3Miner
                             MinBWORKperMint = float.Parse(arg.Split('=')[1]);
                             break;
 
-                        case "HowManyBlocksAWAYFromAdjustmentToSendMinimumZKBTC":
-                            HowManyBlocksAWAYFromAdjustmentToSendMinimumZKBTC = float.Parse(arg.Split('=')[1]);
+                        case "HowManyBlocksAWAYFromAdjustmentToSendMinimumBWORK":
+                            HowManyBlocksAWAYFromAdjustmentToSendMinimumBWORK = float.Parse(arg.Split('=')[1]);
                             break;
                         case "Difficulty_Multiplier":
                             Difficulty_Multiplier = int.Parse(arg.Split('=')[1]);
@@ -882,7 +882,7 @@ namespace SoliditySHA3Miner
         {
             public const string InfuraAPI_mainnet = "https://sepolia.base.org/";
             public const string InfuraAPI_ropsten = "";
-            public const string contractAddress = "0x004F86756F7e184075C64CEDe9A1d474DD49BE90";
+            public const string contractAddress = "0x145a6c4421C14486A4f1bDe654ACc56ea810316D";
             public const int chainID = 84532;
             public const string Contract0xBTC_ropsten = "";
             public const string AbiFile0xBTC = "BWORK.abi";
@@ -892,9 +892,9 @@ namespace SoliditySHA3Miner
             public const string GasApiPath = "$.result.SafeGasPrice";
             public const float GasApiMultiplier = 1f;
             public const float GasApiMultiplier2 = 4f;
-            public const float MaxBWORKperMint = 250f;
+            public const float MaxBWORKperMint = 125f;
             public const float MinBWORKperMint = 25f;
-            public const float HowManyBlocksAWAYFromAdjustmentToSendMinimumZKBTC = 500f;
+            public const float HowManyBlocksAWAYFromAdjustmentToSendMinimumBWORK = 500f;
             public const float GasApiOffset = 0.001f;
 
             public const string PoolPrimary = "";
